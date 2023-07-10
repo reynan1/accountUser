@@ -1,0 +1,43 @@
+pipeline {
+  agent {
+    node {
+      label 'KYOO_STAG01'
+      customWorkspace '/var/www/html/BE/v3/kyoo/mailer-service'
+    }
+  }
+  environment {
+    DOCKER_REGISTRY = 'leisuedevteam'
+    DOCKER_IMAGE_NAME = 'mailer'
+    COMPOSER_DIRECTORY = '../composer'
+  }
+  stages {
+    stage ('Pull Container Image') {
+      steps {
+        sh 'cd ${COMPOSER_DIRECTORY} && \
+          sudo docker-compose pull ${DOCKER_IMAGE_NAME}'
+      }
+    }
+    stage ('Remove Container Image') {
+      steps {
+        sh 'cd ${COMPOSER_DIRECTORY} && \
+          sudo docker-compose stop ${DOCKER_IMAGE_NAME} && sudo docker-compose rm -f ${DOCKER_IMAGE_NAME}'
+      }
+    }
+    stage ('Deploy Container Image') {
+      steps {
+        sh 'cd ${COMPOSER_DIRECTORY} && \
+          sudo docker-compose up -d ${DOCKER_IMAGE_NAME}'
+      }
+    }
+    stage ('Smoke Test') {
+      steps {
+        sh 'echo "fucking containexr id : ${DOCKER_CONTAINER_ID}"'
+      }
+    }
+    stage ('Integration Testing') {
+      steps {
+        sh 'echo "Perform integration testing."'
+      }
+    }
+  }
+}
