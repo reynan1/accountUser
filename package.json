@@ -6,7 +6,7 @@
   "scripts": {
     "start": "TS_NODE_BASEURL=./dist node -r tsconfig-paths/register dist/app.js",
     "start:dev": "tsc -w",
-    "dev": "TS_NODE_BASEURL=./dist nodemon -r --legacy-watch tsconfig-paths/register dist/app.js",
+    "dev": "SET NODE_ENV=dev && nodemon -r --legacy-watch tsconfig-paths/register dist/app.js",
     "build": "tsc -p .",
     "test:unit": "echo 'Perform unit testing.'",
     "test:integration": "echo 'Perform integration testing.'"
@@ -39,7 +39,6 @@
     "request": "^2.88.0",
     "swagger-jsdoc": "^6.0.1",
     "ts-enum-extractor": "^1.0.4",
-    "tsconfig-paths": "^4.0.0",
     "uninstall": "^0.0.0",
     "uuid": "^8.3.2",
     "uuidv4": "^6.2.13"
@@ -56,6 +55,7 @@
     "@types/swagger-jsdoc": "^6.0.0",
     "@types/uuid": "^3.4.5",
     "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.2.0",
     "typescript": "4.2"
   }
 }

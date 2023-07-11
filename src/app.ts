@@ -6,43 +6,44 @@ import express from 'express'
 import morgan from 'morgan'
 import bodyParser from 'body-parser'
 const apiMetrics = require('prometheus-api-metrics');
-
-// Types
-import { Application, Request, Response, NextFunction } from "express"
-
-// import {
-//   redisClient
-// } from '@app/configs/redis'
 import {
   Database
 } from '@app/configs/database'
 import {
   MainRoute
 } from '@app/configs/routes'
+// Types
+import { Application, Request, Response, NextFunction } from "express"
+
+
 /**
  * Wrapper Class
  */
 class Main {
-   // type declarations
-   private app: Application
-   private port: string | number | any
+  // type declarations
 
-   constructor() {
-     this.app = express()
-     this.port = process.env.PORT || 3000
-     this.appConfig()
-   }
-   // listen to port
-   public listen() {
+  private app: Application
+  private port: string | number | any
+
+  constructor() {
+    this.app = express()
+    this.port = process.env.PORT || 3000
+    this.appConfig()
+  }
+  // listen to port
+  public listen() {
+    console.log("testing")
     const server = this.app.listen(this.port, (): void => {
       console.log(`*** Server is listening on port ${this.port}`)
     })
   }
   // initialize server configurations
   private appConfig() {
+    console.log("testing")
     this.app.use(morgan("dev"))
     this.app.use(
       express.json({
+
         // check if request.body has valid JSON object
         verify: (request: Request, response: Response, buf: any) => {
           try {

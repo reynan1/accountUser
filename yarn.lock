@@ -1643,7 +1643,7 @@
   "resolved" "https://registry.npmjs.org/json-stringify-safe/-/json-stringify-safe-5.0.1.tgz"
   "version" "5.0.1"
 
-"json5@^2.2.1":
+"json5@^2.2.2":
   "integrity" "sha512-XmOWe7eyHYH14cLdVPoyg+GOH3rYX++KpzrylJwSW98t3Nk+U8XOl8FWKOgwtzdb8lXGf6zYwDUzeHMWfxasyg=="
   "resolved" "https://registry.npmjs.org/json5/-/json5-2.2.3.tgz"
   "version" "2.2.3"
@@ -1801,10 +1801,10 @@
   "resolved" "https://registry.npmjs.org/moment/-/moment-2.29.4.tgz"
   "version" "2.29.4"
 
-"mongodb@3.7.3":
-  "integrity" "sha512-Psm+g3/wHXhjBEktkxXsFMZvd3nemI0r3IPsE0bU+4//PnvNWKkzhZcEsbPcYiWqe8XqXJJEg4Tgtr7Raw67Yw=="
-  "resolved" "https://registry.npmjs.org/mongodb/-/mongodb-3.7.3.tgz"
-  "version" "3.7.3"
+"mongodb@3.7.4":
+  "integrity" "sha512-K5q8aBqEXMwWdVNh94UQTwZ6BejVbFhh1uB6c5FKtPE9eUMZPUO3sRZdgIEcHSrAWmxzpG/FeODDKL388sqRmw=="
+  "resolved" "https://registry.npmjs.org/mongodb/-/mongodb-3.7.4.tgz"
+  "version" "3.7.4"
   dependencies:
     "bl" "^2.2.1"
     "bson" "^1.1.4"
@@ -1820,15 +1820,15 @@
   "version" "1.0.2"
 
 "mongoose@*", "mongoose@^5.6.11":
-  "integrity" "sha512-kzlwQgrWaQflFSdENNGN4+FQEm/yOMgR1T1okIp5fARGQ8YKdjO+0U9Ikzsv5OVSFIkE0ATyJj2XxawYbf2bpA=="
-  "resolved" "https://registry.npmjs.org/mongoose/-/mongoose-5.13.17.tgz"
-  "version" "5.13.17"
+  "integrity" "sha512-t65+DaVfjlSfCPaPsev4YsbB2jHg4vylvkuQOBaCXkXIenXLDhE5ZNEXbChGoPUSFRUp7ihze6YenQwK3nIhPA=="
+  "resolved" "https://registry.npmjs.org/mongoose/-/mongoose-5.13.19.tgz"
+  "version" "5.13.19"
   dependencies:
     "@types/bson" "1.x || 4.0.x"
     "@types/mongodb" "^3.5.27"
     "bson" "^1.1.4"
     "kareem" "2.3.2"
-    "mongodb" "3.7.3"
+    "mongodb" "3.7.4"
     "mongoose-legacy-pluralize" "1.0.2"
     "mpath" "0.8.4"
     "mquery" "3.2.5"
@@ -2319,9 +2319,9 @@
     "mute-stream" "~0.0.4"
 
 "readable-stream@^2.3.5":
-  "integrity" "sha512-Ebho8K4jIbHAxnuxi7o42OrZgF/ZTNcsZj6nRKyUmkhLFq8CHItp/fy6hQZuZmP/n3yZ9VBUbp4zz/mX8hmYPw=="
-  "resolved" "https://registry.npmjs.org/readable-stream/-/readable-stream-2.3.7.tgz"
-  "version" "2.3.7"
+  "integrity" "sha512-8p0AUk4XODgIewSi0l8Epjs+EVnWiK7NoDIEGU0HhE7+ZyY8D1IMY7odu5lRrFXGg71L15KG8QrPmum45RTtdA=="
+  "resolved" "https://registry.npmjs.org/readable-stream/-/readable-stream-2.3.8.tgz"
+  "version" "2.3.8"
   dependencies:
     "core-util-is" "~1.0.0"
     "inherits" "~2.0.3"
@@ -2768,12 +2768,12 @@
     "v8-compile-cache-lib" "^3.0.1"
     "yn" "3.1.1"
 
-"tsconfig-paths@^4.0.0":
-  "integrity" "sha512-SLBg2GBKlR6bVtMgJJlud/o3waplKtL7skmLkExomIiaAtLGtVsoXIqP3SYdjbcH9lq/KVv7pMZeCBpLYOit6Q=="
-  "resolved" "https://registry.npmjs.org/tsconfig-paths/-/tsconfig-paths-4.0.0.tgz"
-  "version" "4.0.0"
+"tsconfig-paths@^4.2.0":
+  "integrity" "sha512-NoZ4roiN7LnbKn9QqE1amc9DJfzvZXxF4xDavcOWt1BPkdx+m+0gJuPM+S0vCe7zTJMYUP0R8pO2XMr+Y8oLIg=="
+  "resolved" "https://registry.npmjs.org/tsconfig-paths/-/tsconfig-paths-4.2.0.tgz"
+  "version" "4.2.0"
   dependencies:
-    "json5" "^2.2.1"
+    "json5" "^2.2.2"
     "minimist" "^1.2.6"
     "strip-bom" "^3.0.0"
 

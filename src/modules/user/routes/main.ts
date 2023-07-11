@@ -2,18 +2,20 @@ import { Router } from 'express'
 
 import { AccountMainController } from '../controllers';
 
-import {
-
-} from './index';
-
 
 export class AccountMainRoute {
+    private app: Router;
+    private readonly accountMainController: AccountMainController;
+
+    constructor() {
+        this.app = Router({ mergeParams: true });
+        this.accountMainController = new AccountMainController();
+    }
 
 
     public expose() {
-        const appRouter = Router({ mergeParams: true });
+        this.app.use('/registration', this.accountMainController.accountRegistration);
 
-        appRouter.use('/registration', new AccountMainController().expose());
-        return appRouter;
+        return this.app;
     }
 }

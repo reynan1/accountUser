@@ -1,12 +1,9 @@
 import { Router, Request, Response, NextFunction } from "express";
 
-/* import emailRouter from "../../routes/email";
-import smsRouter from "../../urls/sms";
-import AccountRouter from "../../routes/account-email";
 
-import { SettingsRoute } from "@modules/sms-settings/routes/settings";
-import { SupportRoute } from "@modules/support/routes/support";
-import { SupportConnectSalesRoute } from "@modules/support-connect-to-sales/routes/supportConnectSales"; */
+
+
+import { AccountMainRoute } from "@modules/user/routes/main";
 
 /**
  * @classes
@@ -35,7 +32,7 @@ export class MainRoute {
   public expose() {
     const appRoute = Router({ mergeParams: true });
     // public or the route that exposed to web server(nginx)
-    appRoute.use("/api", this.currentUserMiddleware, this.routes());
+    appRoute.use("/api", this.routes());
     // private or internal api
     appRoute.use(this.routes());
     return appRoute;
@@ -46,7 +43,7 @@ export class MainRoute {
    */
   private routes = () => {
     const route = Router({ mergeParams: true });
-    // route.use('/docs', new SwaggerRoute().initializeRoutes());
+    route.use('/account', new AccountMainRoute().expose());
     // route.use('/admin-dashboard', smsRouter)
     // route.use('/settings', new SettingsRoute().expose() )
     /* route.use("/settings", new SettingsRoute().expose());

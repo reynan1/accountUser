@@ -4,7 +4,8 @@ export class Database {
    * connect to the repository/database
    */
   public connect() {
-    const databaseConnectionString = (process.env.NODE_ENV === 'test' ? process.env.MONGO_TEST_URI :  `${process.env.DB_PREFIX}://${process.env.DB_HOST}/kyoo_mailer`) as string
+    console.log("hellow po")
+    const databaseConnectionString = (process.env.NODE_ENV === 'test' ? process.env.MONGO_TEST_URI : `${process.env.DB_PREFIX}://${process.env.DB_HOST}/DatingApp`) as string
     console.log('databaseConnectionString :>> ', databaseConnectionString);
     return mongoose
       .connect(databaseConnectionString, {
